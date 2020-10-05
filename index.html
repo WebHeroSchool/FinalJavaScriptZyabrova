@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Найди баг</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href=".css/mediaQueries.css">
+</head>
+<body>
+  <div id="menu" class="menu">
+    <h1 class="menu__title">Выберите уровень сложности:</h1>
+    <span class="menu__subtitle"><b>Выберите сложность и игра начнётся.</b> Чем выше уровень - тем больше будет выборка карт.</span>
+
+    <div class="menu__difficulty">
+      <h2 class="difficulty-item difficulty-item__easy selected" id="easy">Простой</h2>
+      <h2 class="difficulty-item difficulty-item__medium" id="medium">Средний</h2>
+      <h2 class="difficulty-item difficulty-item__hard" id="hard">Сложный</h2>
+    </div>
+
+    <button class="menu__start" id="start">Начать игру</button>
+
+    <div class="menu__cards">
+      <div class="card card__light-rotate">
+        <img class="menu__card" src="./img/reverseCard.png">
+      </div>
+      <div class="card card__hard-rotate">
+        <img class="menu__card" src="./img/reverseCard.png">
+      </div>
+    </div>
+  </div>
+
+  <div id="game"></div>
+
+  <script src="script.js"></script> 
+</body>
+</html>

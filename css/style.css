@@ -1,0 +1,245 @@
+@-webkit-keyframes cardHover {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  50% {
+    -webkit-transform: translateY(-32px) rotate(-3deg);
+            transform: translateY(-32px) rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: translateY(-23px);
+            transform: translateY(-23px);
+  }
+}
+
+@keyframes cardHover {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+  50% {
+    -webkit-transform: translateY(-32px) rotate(-3deg);
+            transform: translateY(-32px) rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: translateY(-23px);
+            transform: translateY(-23px);
+  }
+}
+
+@-webkit-keyframes rotateCard {
+  0% {
+    -webkit-transform: translateY(-23px);
+            transform: translateY(-23px);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+@keyframes rotateCard {
+  0% {
+    -webkit-transform: translateY(-23px);
+            transform: translateY(-23px);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  background: url(../img/Background.png);
+  margin: 0;
+}
+
+.menu {
+  padding-top: 90px;
+  padding-left: 103px;
+}
+
+.menu__title {
+  font-size: 57px;
+  line-height: 67px;
+  margin-bottom: 9px;
+}
+
+.menu__subtitle {
+  font-size: 19px;
+  line-height: 22px;
+  padding-left: 2px;
+}
+
+.menu__difficulty {
+  font-size: 33px;
+  line-height: 42px;
+  padding-top: 27px;
+  padding-left: 50px;
+  margin-bottom: 120px;
+}
+
+.menu__start {
+  cursor: pointer;
+  font-size: 31px;
+  line-height: 37px;
+  font-weight: bold;
+  color: #fff;
+  background: #D62B2E;
+  border-radius: 7px;
+  margin-left: -1px;
+  padding: 29px 83px 28px 82px;
+}
+
+.menu__start:hover {
+  -webkit-transform: translate(2px, 1px);
+          transform: translate(2px, 1px);
+  opacity: .9;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.menu__cards {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.difficulty-item__easy {
+  position: relative;
+  cursor: pointer;
+}
+
+.difficulty-item__medium {
+  position: relative;
+  cursor: pointer;
+}
+
+.difficulty-item__hard {
+  position: relative;
+  cursor: pointer;
+}
+
+.difficulty-item:hover {
+  color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: color .4s ease-in-out;
+  transition: color .4s ease-in-out;
+}
+
+.selected::before {
+  content: "";
+  position: absolute;
+  left: -46px;
+  top: 12px;
+  width: 18px;
+  height: 18px;
+  background: #D62B2E;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.card {
+  position: relative;
+  width: 218px;
+  height: 341px;
+  margin: 12px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.card__front {
+  position: absolute;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card__back {
+  position: absolute;
+}
+
+.card--light-rotate {
+  right: 333px;
+  top: 531px;
+  -webkit-filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+          filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.7));
+  -webkit-transform: rotate(11.9deg);
+          transform: rotate(11.9deg);
+}
+
+.card--hard-rotate {
+  right: 153px;
+  top: 208px;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)), drop-shadow(-2px 0px 1px rgba(0, 0, 0, 0.3));
+  -webkit-transform: rotate(39.26deg);
+          transform: rotate(39.26deg);
+}
+
+#back {
+  position: absolute;
+  cursor: pointer;
+  bottom: 5px;
+  right: 5px;
+}
+
+.game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 61px;
+}
+
+.game .card:hover {
+  -webkit-animation: cardHover .8s ease-in-out forwards;
+          animation: cardHover .8s ease-in-out forwards;
+}
+
+.medium {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 730px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 148px;
+}
+
+.hard {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1210px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 148px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.rotate {
+  -webkit-animation: rotateCard .4s ease-in-out forwards !important;
+          animation: rotateCard .4s ease-in-out forwards !important;
+}
+
+.flex {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
